@@ -7,7 +7,8 @@ class App extends Component {
   render() {
 
     const bbb = [
-      "yapılacak ilk iş"
+      "yapılacak ilk iş",
+      "yapılacak ikinci iş"
     ]
 
     return (
