@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class TodoList extends Component {
+export  class TodoList extends Component {
   render() {
     const items = this.props.aaa.map((elem, i) => {
       return (

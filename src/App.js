@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { TodoList } from "./todoList";
-import Request from "react-http-request";
+import { Liste } from "./liste";
 
 class App extends Component {
   render() {
@@ -10,29 +10,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Request
-          url="http://5ba7a64668c16e0014c4eeff.mockapi.io/kitap"
-          method="get"
-          accept="application/json"
-          // verbose={true}
-        >
-          {({ error, result, loading }) => {
-            if (loading) {
-              return <div>loading...</div>;
-            } else {
-              const listeHtml = result.body.map((item, i) => {
-                return (
-                  <div>
-                    {i} - {item.kitapAdi}
-                  </div>
-                );
-              });
-              return <div> {listeHtml}</div>;
-
-              // return <div>{JSON.stringify(result)}</div>;
-            }
-          }}
-        </Request>
+        
+        <Liste></Liste>
 
         <TodoList aaa={bbb} />
       </div>
